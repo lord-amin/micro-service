@@ -1,0 +1,76 @@
+==== Release audit-server-5.0.0 === (Revision: g_master#ef49fffc) ====================================
+Date: January-07-2019
+New Features:
+-use auth-server 5.0.0
+
+Bug Fixes:
+-empty events bug fix
+
+Compatible Components:
+- Auth-server  version 5.0.0 and higher
+
+==== Release audit-server-4.0.1 === (Revision: g_master#00cc53e3) ====================================
+Date: December-17-2018
+New Features:
+Bug Fixes:
+-bug fix : create search indices
+
+Compatible Components:
+- Auth-Server version 2.2.1 and higher versions
+==== Release audit-server-4.0.0 === (Revision: g_master#d5a5c017) ====================================
+Date: September-29-2018
+New Features:
+- Added API to list all existing Users/Events/Contexts
+
+Bug Fixes:
+
+Compatible Components:
+- Auth-Server version 2.2.1 and higher versions
+
+==== Release audit-server-3.0.1 === (Revision: g_master#285c8d49) ====================================
+Date: September-11-2018
+New Features:
+
+Bug Fixes:
+- Fixed Auth-Server-3.2.0 integration bug for superuser search.
+
+Compatible Components:
+- Auth-Server version 2.2.1 and above
+
+==== Release audit-server-3.0.0 === (Revision: g_master#e7373840) ====================================
+Date: August-29-2018
+New Features:
+- Enhancements in Search API.
+- Enhancements in Log API.
+
+Bug Fixes:
+- Fix Bug in Elastic Connection.
+- Fix Bug in Search Query for Whitespaces.
+
+Compatible Components:
+- Auth-Server version 2.2.1 and Higher versions.
+
+==== Release audit-server-2.1.0 === (Revision: g_master#1cb692e3) ====================================
+Date: August-12-2018
+New Features:
+- Added Permissions
+
+Bug Fixes:
+
+==== Release audit-server-2.0.0 === (Revision: g_master#f6991cce) ====================================
+Date: July-31-2018
+New Features:
+- Added Partitioning.
+- Added Default Sort by Time.
+- Added Sort by Main Fields.
+- API Enhancements.
+
+Bug Fixes:
+
+==== Release audit-server-1.0.0 === (Revision: g_master#c6187a10) ====================================
+Date: June-25-2018
+New Features:
+- Log Feature
+- Search Feature
+
+Bug Fixes:

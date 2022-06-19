@@ -1,0 +1,409 @@
+<!doctype html>
+<html>
+<head>
+    <title></title>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" />
+    <link href="https://cdn.rawgit.com/rastikerdar/vazir-font/v19.0.0/dist/font-face.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">*,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Vazir, Tahoma, Arial, sans-serif;
+        font-weight: 300;
+        font-size: 16px;
+        padding: 0;
+        margin: 0;
+        color: #000000;
+        background: #fff;
+        height: 100%;
+        position: relative;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        -ms-overflow-style: scrollbar;
+        overflow-x: hidden;
+    }
+
+    .container {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto
+    }
+
+    @media (min-width: 576px) {
+        .container {
+            max-width: 540px
+        }
+    }
+
+    @media (min-width: 768px) {
+        .container {
+            max-width: 720px
+        }
+    }
+
+    @media (min-width: 992px) {
+        .container {
+            max-width: 960px
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .container {
+            max-width: 1140px
+        }
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+
+    @media screen and (max-width: 768px) {
+        body {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+    }
+
+    a {
+        -webkit-transition: 0.5s;
+        -o-transition: 0.5s;
+        transition: 0.5s;
+        text-decoration: none;
+    }
+
+    a:hover,
+    a:active,
+    a:focus {
+        color: #52d3aa;
+        outline: none;
+        text-decoration: none;
+    }
+
+    p {
+        margin-bottom: 1.5em;
+        text-align: right;
+        line-height: 2;
+    }
+
+    pre {
+        padding: 1.5em;
+        color: #dbd8da;
+        background: #2c3747;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 1.2;
+        overflow-x: auto;
+        border-radius: 10px;
+        box-shadow: 0px 4px 14px rgba(41, 55, 72, 0.4);
+    }
+
+    code {
+        font-family: "Courier New", Courier, monospace;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: Vazir, Tahoma, Arial, sans-serif;
+        color: #000;
+        margin: 30px 0;
+        text-align: right;
+        position: relative
+    }
+
+    h3 {
+        padding-right: 15px;
+    }
+
+    h4 {
+        padding-right: 22px;
+    }
+
+    h1:first-child {
+        color: #2c3747;
+        font-size: 28px;
+        border-bottom: 1px solid #bfbfbf;
+        padding-bottom: 25px;
+    }
+
+    h3:after {
+        content: '';
+        display: block;
+        width: 5px;
+        height: 100%;
+        background-color: #52d3aa;
+        position: absolute;
+        right: 0;
+        top: 0;
+        border-radius: 4px;
+    }
+
+    h4:after {
+        content: '';
+        display: block;
+        width: 5px;
+        height: 100%;
+        background-color: #52d3aa;
+        position: absolute;
+        right: 0;
+        top: 0;
+        border-radius: 4px;
+    }
+
+    h4:before {
+        content: '';
+        display: block;
+        width: 5px;
+        height: 100%;
+        background-color: #52d3aa;
+        position: absolute;
+        right: 6px;
+        top: 0;
+        border-radius: 4px;
+    }
+
+    ::-moz-selection {
+        color: #fff;
+        background: #52d3aa;
+    }
+
+    ::selection {
+        color: #fff;
+        background: #52d3aa;
+    }
+
+    @media screen and (max-width: 768px) {
+        .table-responsive table {
+            width: 100%;
+            margin-bottom: 0;
+        }
+
+        .table-responsive {
+            margin-bottom: 45px;
+        }
+
+        .row {
+            margin-right: 0;
+            margin-left: 0;
+        }
+    }
+
+    table {
+        border-radius: 5px;
+        margin-bottom: 45px;
+        border: 1px solid rgba(0, 0, 0, 0.17);
+        transition: all ease 0.25S;
+        background: #fff;
+    }
+
+    .table-responsive {
+        overflow-x: auto
+    }
+
+    td,
+    th {
+        padding: 10px;
+        background-color: #fff;
+        border-bottom: 1px solid #dddddd;
+        line-height: 1.5;
+        font-size: 15px;
+    }
+
+    tr:last-child td {
+        border-bottom: none;
+    }
+
+    tr td:first-child {
+        background-color: #eee
+    }
+
+    .green tr td:first-child {
+        background-color: #d4edda
+    }
+
+    .red tr td:first-child {
+        background-color: #f8d7da
+    }
+
+    tr td:last-child {
+        text-align: right;
+        direction: rtl;
+    }
+    .info-note{
+        background: #A5E4FB;
+        padding: 17px;
+        border-radius: 5px;
+        border: 1px solid #03ABE8;
+    }
+    .success-note{
+        background: #c1f0e4;
+        padding: 17px;
+        border-radius: 5px;
+        border: 1px solid #5bad99;
+    }
+    .warning-note{
+        background: #F9DC88;
+        padding: 17px;
+        border-radius: 5px;
+        border: 1px solid #E59A04;
+    }
+    .error-note{
+        background: #FACDCC;
+        padding: 17px;
+        border-radius: 5px;
+        border: 1px solid #E80703;
+    }
+    .container{
+        border-bottom:1px solid #bfbfbf;
+        padding-bottom: 25px;
+    }
+    .footer{
+
+        text-align: center;
+        padding: 20px;
+    }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1 id="audit-server-4-0-0">‫‫مستند نصب و پیکربندی مولفه Audit-Server ورژن 5.0.0</h1>
+
+    <h2 id="prerequisites">پیش&zwnj;نیاز</h2>
+
+    <h3>نصب مولفه&zwnj;های داخلی پیک&zwnj;آسا</h3>
+
+    <p>‫برای نصب این برنامه نیاز دارید که ابتدا مولفه <a href="https://rep.peykasa.ir/index.php?dir=%2FRelease-Repository%2FUI-Framework%2FAuth-Server/">Auth-Server</a> را نصب کنید. نسخه&zwnj;های سازگار، <code>5.0.0</code> و بالاتر می&zwnj;باشند.</p>
+
+    <h3>‫نصب ElasticSearch</h3>
+
+    <p>‫برای نصب این برنامه نیاز دارید که مولفه <a href="https://www.elastic.co/">Elastic Search 6.1.1</a> را نصب کنید.</p>
+
+    <h3>‫نصب JDK</h3>
+
+    <p>‫مطمئن شوید که java8 نصب شده&zwnj;است.</p>
+
+    <pre>
+<code>$ java -version
+java version &quot;1.8.0_31&quot;
+Java(TM) SE Runtime Environment (build 1.8.0_31-b13)
+Java HotSpot(TM) 64-Bit Server VM (build 25.31-b07, mixed mode)</code></pre>
+
+    <h3 id="database-preparation">‫آماده&zwnj;سازی دیتابیس</h3>
+
+    <p>‫در پوشه <code>db-script/Create-DB</code> فایلی به نام <code>permission.sql</code> موجود است.<br />
+        ‫این فایل حاوی دسترسی&zwnj;های مورد نیاز برنامه است. این دسترسی&zwnj;ها باید در دیتابیس <code>Auth-Server</code> وارد شود. کافیست این فایل را به&zwnj;صورت زیر بر روی دیتابیس <code>Auth-Server</code> اجرا کنید.</p>
+
+    <pre>
+<code>mysql --verbose -u$DBA_USER -h $DBSERVER -p$DBA_PWD auth_server &lt; permission.sql</code></pre>
+
+    <p>‫مقادیر <code>DBA_USER</code>، <code>DBA_PWD</code> و <code>DBSERVER</code> را متناسب با دیتابیس <code>Auth-Server</code> تنظیم نمایید.</p>
+
+    <h2 id="installation">نصب برنامه</h2>
+
+    <p>‫‫فایل نصب را از <a href="http://rep.peykasa.ir/Release-Repository/UI-Framework/Audit-Server">repository شرکت</a> ‫دریافت کنید. این فایل را در پوشه <code>/tmp/audit-server/</code> از حالت فشرده خارج نموده و فایل <code>install.sh</code> را از درون آن اجرا کنید.</p>
+
+    <h2 id="configuration">پیکربندی</h2>
+
+    <p>‫‫‫فایل <code>application.properties</code> که در پوشه <code>config</code> قرار دارد، حاوی پیکربندی&zwnj;های اصلی برنامه می&zwnj;باشد. این پیکربندی&zwnj;ها در زیر شرح داده&zwnj;شده&zwnj;اند:</p>
+
+    <h3 id="general-configuration">‫پیکربندی&zwnj;های عمومی</h3>
+
+    <div class="table-responsive">
+        <table>
+            <tbody>
+            <tr>
+                <td>server.port</td>
+                <td>‫‫پورت اجرای برنامه</td>
+            </tr>
+            <tr>
+                <td>server.address</td>
+                <td>‫‫‫آدرس اجرای برنامه؛ ‫‫‫در صورتی که نیاز دارید این مولفه از سرورهای دیگر قابل دسترسی باشد، باید مقدار این پارامتر را برابر <code>0.0.0.0</code> قرار دهید.</td>
+            </tr>
+            <tr>
+                <td>logging.level.root</td>
+                <td>‫‫‫سطح لاگ برنامه</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 id="elastic-configuration">‫پیکربندی اتصال به مولفه ElasticSearch</h3>
+
+    <div class="table-responsive">
+        <table>
+            <tbody>
+            <tr>
+                <td>app.audit.elastic.ip</td>
+                <td>‫‫‫آدرس IP مولفه ElasticSearch</td>
+            </tr>
+            <tr>
+                <td>app.audit.elastic.port</td>
+                <td>پورت مولفه ElasticSearch</td>
+            </tr>
+            <tr>
+                <td>app.audit.elastic.clustername</td>
+                <td>‫نام Cluster مولفه ElasticSearch</td>
+            </tr>
+            <tr>
+                <td>app.audit.elastic.partitioning</td>
+                <td>‫نوع partitioning مولفه ElasticSearch؛ مقادیر مجاز DAY, WEEK, MONTH هستند.</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 id="auth-configuration">‫پیکربندی اتصال به مولفه Auth-Server</h3>
+
+    <div class="table-responsive">
+        <table>
+            <tbody>
+            <tr>
+                <td>rs.security.enable</td>
+                <td>‫فعال بودن کنترل دسترسی&zwnj;ها؛ مقادیر مجاز true و false هستند.</td>
+            </tr>
+            <tr>
+                <td>rs.security.auth.server.context.path</td>
+                <td>‫آدرس اتصال به مولفه Auth-Server؛ این کانفیگ می&zwnj;تواند به&zwnj;صورت <code>http://localhost:1998/auth-server/v3</code> باشد.</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p class="info-note">‫در&zwnj;صورتی&zwnj;که مقدار کانفیگ <code>rs.security.enable</code> را برابر <code>false</code> قرار دهید(به&zwnj;معنای عدم نیاز به کنترل دسترسی&zwnj;ها)، نیازی به نصب مولفه <code>Auth-Server</code> نیست. &zwnj;هم&zwnj;چنین نیازی به تنظیم کانفیگ <code>rs.security.auth.server.context.path</code> نخواهیدداشت.</p>
+
+    <h2 id="deployment">راه&zwnj;اندازی</h2>
+
+    <p>‫‫اجرا و توقف برنامه از طریق سرویس انجام می&zwnj;گیرد:</p>
+
+    <pre>
+<code>/etc/init.d/pa-audit-server start
+/etc/init.d/pa-audit-server stop
+</code></pre>
+
+    <h2 id="logtail">مشاهده لاگ</h2>
+
+    <p>‫‫‫لاگ سیستم در شاخه log در محل نصب ذخیره می شود:</p>
+
+    <pre>
+<code>tail -f /usr/local/PeykAsa/audit-server-4.0.0/log/pa-audit-server.log</code></pre>
+
+    <h3 dir="rtl">پیکربندی سطح دسترسی ها</h3>
+
+    <p dir="rtl">فایل&nbsp;permissions-audit.json در بسته را با استفاده از ابزار <a href="https://rep.peykasa.ir/Release-Repository/UI-Framework/Auth-Server/permission-importer-user-guide.html" target="_blank">permission-importer.sh</a>&nbsp;در مولفه auth-server وارد کنید.</p>
+</div>
+
+<div class="footer"><a href="http://peykasa.com">&copy;2018 Peykasa</a></div>
+</body>
+</html>

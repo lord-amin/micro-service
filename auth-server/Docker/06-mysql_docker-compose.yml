@@ -1,0 +1,29 @@
+version: '3.7'
+networks:
+  CLOUD_NETWORK:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 100.10.10.1/8
+volumes:
+  esdata:
+    driver: local
+services:
+  mysql-service:
+    image: gitlab.peykasa.ir:4567/olap-x/dockers/mysql:8
+    logging:
+      driver: "json-file"
+      options:
+        max-file: "5"
+        max-size: "100m"
+    ports:
+      - "${MYSQL_PORT}:${MYSQL_PORT}"
+    command: --max_allowed_packet=32505856  --default-authentication-plugin=mysql_native_password --sql_mode=""
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASS}
+    volumes:
+      - ./data/mysql_v3:/var/lib/mysql
+      - ./db-script:/docker-entrypoint-initdb.d
+    networks:
+      - CLOUD_NETWORK

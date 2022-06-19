@@ -1,0 +1,31 @@
+{
+  "permissions": [
+    {
+      "name": "audit_search",
+      "title": "Action log",
+      "desc": "Action log",
+      "apiList": [
+        {
+          "method": "post",
+          "url": "/api/action/logs/search"
+        },
+        {
+          "method": "get",
+          "url": "/api/action/logs/search/events"
+        },
+        {
+          "method": "get",
+          "url": "/api/action/logs/search/eventsByContext"
+        },
+        {
+          "method": "get",
+          "url": "/api/action/logs/search/contexts"
+        },
+        {
+          "method": "get",
+          "url": "/api/action/logs/search/users"
+        }
+      ]
+    }
+  ]
+}

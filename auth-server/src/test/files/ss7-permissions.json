@@ -1,0 +1,75 @@
+{
+  "permissions": [
+    {
+      "name": "ss7_signaling_firewall",
+      "title": "SS7 Signaling Firewall",
+      "desc": "SS7 Signaling Firewall Permissions",
+      "permissions": [
+        {
+          "name": "reporting",
+          "title": "Reporting",
+          "desc": "Reporting Permissions",
+          "permissions": [
+            {
+              "name": "overview",
+              "title": "Overview",
+              "desc": "Overview Permissions",
+              "apiList": [
+                {
+                  "method": "get",
+                  "url": "reporting-api/v1/attack-counts"
+                },
+                {
+                  "method": "get",
+                  "url": "reporting-api/v1/latest-attacks"
+                }
+              ]
+            },
+            {
+              "name": "attacks",
+              "title": "Attacks",
+              "desc": "Attack Permissions",
+              "apiList": [
+                {
+                  "method": "get",
+                  "url": "reporting-api/v1/attack-details"
+                },
+                {
+                  "method": "get",
+                  "url": "reporting-api/v1/attack-counts"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "setting",
+          "title": "Setting",
+          "desc": "Setting Permissions",
+          "apiList": [
+            {
+              "method": "get",
+              "url": "settings/SS7Firewall/**"
+            },
+            {
+              "method": "post",
+              "url": "settings/SS7Firewall/**"
+            },
+            {
+              "method": "delete",
+              "url": "settings/SS7Firewall/**"
+            },
+            {
+              "method": "put",
+              "url": "settings/SS7Firewall/**"
+            },
+            {
+              "method": "patch",
+              "url": "settings/SS7Firewall/**"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

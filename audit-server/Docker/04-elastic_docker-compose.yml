@@ -1,0 +1,65 @@
+version: '3.7'
+services:
+  elasticsearch-8:
+    image: gitlab.peykasa.ir:4567/olap-x/dockers/elasticsearch:8.2.0
+    logging:
+      driver: "json-file"
+      options:
+        max-file: "5"
+        max-size: "100m"
+    environment:
+      - "node.name=es01"
+      - "cluster.name=${ELASTIC_CLUSTER_NAME}"
+      - "node.roles=master,data_hot,data_content,ingest,remote_cluster_client"
+      - "discovery.seed_hosts=es01"
+      - "cluster.initial_master_nodes=es01"
+      - "cluster.routing.allocation.enable:all"
+      - "bootstrap.memory_lock=true"
+      - "ingest.geoip.downloader.enabled=false"
+      - "ES_JAVA_OPTS=-Xms2048m -Xmx2048m"
+      - "http.cors.enabled=true"
+      - "http.cors.allow-headers=X-Requested-With,X-Auth-Token,Content-Type,Content-Length,Authorization"
+      - "reindex.remote.whitelist=${REINDEX_REMOTE_WHITELIST}"
+      - "cluster.routing.allocation.disk.threshold_enabled=true"
+      - "cluster.routing.allocation.disk.watermark.flood_stage=200mb"
+      - "cluster.routing.allocation.disk.watermark.low=500mb"
+      - "cluster.routing.allocation.disk.watermark.high=300mb"
+      - "xpack.security.enabled=false"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - esdata8:/usr/share/elasticsearch/data
+    ports:
+      - ${ELASTIC_INTER_PORT}:${ELASTIC_INTER_PORT}
+      - ${ELASTIC_PORT}:${ELASTIC_PORT}
+    networks:
+      - CLOUD_NETWORK
+
+  kibana-8:
+    image: gitlab.peykasa.ir:4567/olap-x/dockers/kibana:8.2.0
+    logging:
+      driver: "json-file"
+      options:
+        max-file: "5"
+        max-size: "100m"
+    environment:
+      "ELASTICSEARCH_HOSTS": '["http://elasticsearch-8:${ELASTIC_INTER_PORT}"]'
+    ports:
+      - 5601:5601
+    links:
+      - elasticsearch-8
+    networks:
+      - CLOUD_NETWORK
+
+networks:
+  CLOUD_NETWORK:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 100.10.10.1/8
+volumes:
+  esdata8:
+    driver: local

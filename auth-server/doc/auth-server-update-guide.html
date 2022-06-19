@@ -1,0 +1,319 @@
+<!doctype html>
+<html>
+<head>
+    <title></title>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" />
+    <link href="https://cdn.rawgit.com/rastikerdar/vazir-font/v19.0.0/dist/font-face.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">*,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Vazir, Tahoma, Arial, sans-serif;
+        font-weight: 300;
+        font-size: 16px;
+        padding: 0;
+        margin: 0;
+        color: #000000;
+        background: #fff;
+        height: 100%;
+        position: relative;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        -ms-overflow-style: scrollbar;
+        overflow-x: hidden;
+    }
+
+    .container {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto
+    }
+
+    @media (min-width: 576px) {
+        .container {
+            max-width: 540px
+        }
+    }
+
+    @media (min-width: 768px) {
+        .container {
+            max-width: 720px
+        }
+    }
+
+    @media (min-width: 992px) {
+        .container {
+            max-width: 960px
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .container {
+            max-width: 1140px
+        }
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+
+    @media screen and (max-width: 768px) {
+        body {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+    }
+
+    a {
+        -webkit-transition: 0.5s;
+        -o-transition: 0.5s;
+        transition: 0.5s;
+        text-decoration: none;
+    }
+
+    a:hover,
+    a:active,
+    a:focus {
+        color: #52d3aa;
+        outline: none;
+        text-decoration: none;
+    }
+
+    p {
+        margin-bottom: 1.5em;
+        text-align: right;
+        line-height: 2;
+    }
+
+    pre {
+        padding: 1.5em;
+        color: #dbd8da;
+        background: #2c3747;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 1.2;
+        overflow-x: auto;
+        border-radius: 10px;
+        box-shadow: 0px 4px 14px rgba(41, 55, 72, 0.4);
+    }
+
+    code {
+        font-family: "Courier New", Courier, monospace;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: Vazir, Tahoma, Arial, sans-serif;
+        color: #000;
+        margin: 30px 0;
+        text-align: right;
+        position: relative
+    }
+
+    h3 {
+        padding-right: 15px;
+    }
+
+    h4 {
+        padding-right: 22px;
+    }
+
+    h1:first-child {
+        color: #2c3747;
+        font-size: 28px;
+        border-bottom: 1px solid #bfbfbf;
+        padding-bottom: 25px;
+    }
+
+    h3:after {
+        content: '';
+        display: block;
+        width: 5px;
+        height: 100%;
+        background-color: #52d3aa;
+        position: absolute;
+        right: 0;
+        top: 0;
+        border-radius: 4px;
+    }
+
+    h4:after {
+        content: '';
+        display: block;
+        width: 5px;
+        height: 100%;
+        background-color: #52d3aa;
+        position: absolute;
+        right: 0;
+        top: 0;
+        border-radius: 4px;
+    }
+
+    h4:before {
+        content: '';
+        display: block;
+        width: 5px;
+        height: 100%;
+        background-color: #52d3aa;
+        position: absolute;
+        right: 6px;
+        top: 0;
+        border-radius: 4px;
+    }
+
+    ::-moz-selection {
+        color: #fff;
+        background: #52d3aa;
+    }
+
+    ::selection {
+        color: #fff;
+        background: #52d3aa;
+    }
+
+    @media screen and (max-width: 768px) {
+        .table-responsive table {
+            width: 100%;
+            margin-bottom: 0;
+        }
+
+        .table-responsive {
+            margin-bottom: 45px;
+        }
+
+        .row {
+            margin-right: 0;
+            margin-left: 0;
+        }
+    }
+
+    table {
+        border-radius: 5px;
+        margin-bottom: 45px;
+        border: 1px solid rgba(0, 0, 0, 0.17);
+        transition: all ease 0.25S;
+        background: #fff;
+    }
+
+    .table-responsive {
+        overflow-x: auto
+    }
+
+    td,
+    th {
+        padding: 10px;
+        background-color: #fff;
+        border-bottom: 1px solid #dddddd;
+        line-height: 1.5;
+        font-size: 15px;
+    }
+
+    tr:last-child td {
+        border-bottom: none;
+    }
+
+    tr td:first-child {
+        background-color: #eee
+    }
+
+    .green tr td:first-child {
+        background-color: #d4edda
+    }
+
+    .red tr td:first-child {
+        background-color: #f8d7da
+    }
+
+    tr td:last-child {
+        text-align: right;
+        direction: rtl;
+    }
+    .info-note{
+        background: #A5E4FB;
+        padding: 17px;
+        border-radius: 5px;
+        border: 1px solid #03ABE8;
+    }
+    .success-note{
+        background: #c1f0e4;
+        padding: 17px;
+        border-radius: 5px;
+        border: 1px solid #5bad99;
+    }
+    .warning-note{
+        background: #F9DC88;
+        padding: 17px;
+        border-radius: 5px;
+        border: 1px solid #E59A04;
+    }
+    .error-note{
+        background: #FACDCC;
+        padding: 17px;
+        border-radius: 5px;
+        border: 1px solid #E80703;
+    }
+    .container{
+        border-bottom:1px solid #bfbfbf;
+        padding-bottom: 25px;
+    }
+    .footer{
+
+        text-align: center;
+        padding: 20px;
+    }
+    </style>
+    <link href="https://svc.webspellchecker.net/spellcheck31/lf/scayt3/ckscayt/css/wsc.css" rel="stylesheet" type="text/css" />
+</head>
+<body aria-readonly="false">
+<div class="container">
+    <h1 id="audit-server-5-0-0">‫‫مستند بروزرسانی و پیکربندی مولفه Auth-Server&nbsp; از نسخه 4.0.2&nbsp; به نسخه 5.0.0</h1>
+
+    <h3 id="prerequisites">بروزرسانی دیتابیس</h3>
+
+    <p dir="rtl">فایل&nbsp;update4.0.2-to-5.0.0.sql را از بسته <a href="http://rep.peykasa.ir/Release-Repository/UI-Framework/Auth-Server/5.0.0/db-scripts/">Update-DB.tar</a> بر روی سرور MYSQL کپی کنید و سپس دستور زیر را&nbsp; بر روی سرور MYSQL اجرا کنید:</p>
+
+    <pre style="background-color:#ffffff;color:#000000;font-family:'Courier New';font-size:9.0pt;">
+mysql --verbose -u${DBA_USER} -h ${DBSERVER} -p${DBA_PWD} ${DBNAME} &lt; update.sql &gt; auth-server.log 2&gt;&amp;1</pre>
+
+    <table border="1" cellpadding="1" cellspacing="1" style="width:100%;">
+        <tbody>
+        <tr>
+            <td>DBSERVER=localhost</td>
+            <td>آدرس ای پی سرور MYSQL</td>
+        </tr>
+        <tr>
+            <td>DBA_USER=root</td>
+            <td>نام کاربری کاربر مدیرMYSQL</td>
+        </tr>
+        <tr>
+            <td>DBA_PWD</td>
+            <td>رمز عبور کاربر مدیر MYSQL</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <p dir="rtl">اگر خطایی باشد در فایل auth_server.log می توانید مشاهده کنید.</p>
+
+    <p dir="rtl">فایل <a href="https://rep.peykasa.ir/Release-Repository/UI-Framework/Auth-Server/permissions-interface-guide.html" target="_blank">permissions-auth.json</a>&nbsp;را از بسته&nbsp;با استفاده از ابزار<a href="https://rep.peykasa.ir/Release-Repository/UI-Framework/Auth-Server/permission-importer-user-guide.html" target="_blank">&nbsp;permission-importer.sh</a> به دیتابیس&nbsp;وارد&nbsp;کنید.</p>
+
+    <p dir="rtl">برای این نسخه باید <a href="https://rep.peykasa.ir/index.php?dir=%2FRelease-Repository%2FUI-Framework%2FAudit-Server/5.0.0" target="_blank">audit-server</a> نسخه 5.0.0 را نصب کنید.</p>
+
+    <p dir="rtl">سپس سیستم را ری استارت کنید.</p>
+</div>
+
+<div class="footer"><a href="http://peykasa.com">&copy;2018 Peykasa</a></div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+[
+  {"time":1513751400000,"event":"event-1","context":"context -1","actor":"actor-1","status":"status-1","remoteAddress":"r-m-1","fromState":{},"toState":{},"extraInfo":"extraInfo-1"},
+  {"time":1513837800000,"event":"event-2","context":"context -1","actor":"actor-1","status":"status-1","remoteAddress":"r-m-1","fromState":{},"toState":{},"extraInfo":"extraInfo-1"},
+  {"time":1513924200000,"event":"event-2","context":"context-2","actor":"actor-1","status":"status-1","remoteAddress":"r-m-1","fromState":{},"toState":{},"extraInfo":"extraInfo-1"},
+  {"time":1514010600000,"event":"event-2","context":"context-2","actor":"actor-2","status":"status-1","remoteAddress":"r-m-1","fromState":{},"toState":{},"extraInfo":"extraInfo-1"},
+  {"time":1514097000000,"event":"event-2","context":"context-2","actor":"actor-2","status":"status-2","remoteAddress":"r-m-1","fromState":{},"toState":{},"extraInfo":"extraInfo-1"},
+  {"time":1514183400000,"event":"event-2","context":"context-2","actor":"actor-2","status":"status-2","remoteAddress":"r-m-2","fromState":{},"toState":{},"extraInfo":"extraInfo-1"}
+]

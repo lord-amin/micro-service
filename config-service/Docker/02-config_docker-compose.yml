@@ -1,0 +1,28 @@
+version: '3.7'
+networks:
+  CLOUD_NETWORK:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 100.10.10.1/8
+
+services:
+  config-service:
+    image: gitlab.peykasa.ir:4567/jlibraries/cloud:${CONFIG_TAG}
+    volumes:
+      - ./config-repos:/usr/local/PeykAsa/config-service/config-repos
+    logging:
+      driver: "json-file"
+      options:
+        max-file: "100"
+        max-size: "1000m"
+    ports:
+      - "${CONFIG_SERVER_PORT}:${CONFIG_SERVER_PORT}"
+    environment:
+      server.port: "${CONFIG_SERVER_PORT}"
+      spring.application.name: "${CONFIG_APP_NAME}"
+      eureka.client.service-url.defaultZone: "http://discovery-service:${DISCOVERY_SERVER_PORT}/eureka"
+      spring.cloud.config.server.native.search-locations: "file:/usr/local/PeykAsa/config-service/config-repos"
+    networks:
+      - CLOUD_NETWORK

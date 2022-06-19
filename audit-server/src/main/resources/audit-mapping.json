@@ -1,0 +1,24 @@
+{
+  "settings": {
+  },
+  "mappings": {
+    "json": {
+      "_source": {
+        "enabled": true
+      },
+      "properties": {
+        "time": {
+          "type": "date",
+          "doc_values": true,
+          "format": "epoch_millis"
+        },
+        "fromState": {
+          "type": "nested"
+        },
+        "toState": {
+          "type": "nested"
+        }
+      }
+    }
+  }
+}

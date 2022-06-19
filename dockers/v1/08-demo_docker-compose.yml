@@ -1,0 +1,26 @@
+version: '3.7'
+networks:
+  CLOUD_NETWORK:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 100.10.10.1/8
+
+services:
+  demo-server:
+    image: gitlab.peykasa.ir:4567/jlibraries/cloud:${DEMO_TAG}
+    logging:
+      driver: "json-file"
+      options:
+        max-file: "100"
+        max-size: "1000m"
+    ports:
+      - "${DEMO_SERVER_PORT}:${DEMO_SERVER_PORT}"
+    environment:
+      server.port: "${DEMO_SERVER_PORT}"
+      spring.application.name: "${DEMO_APP_NAME}"
+      spring.cloud.config.discovery.service-id: "${CONFIG_APP_NAME}"
+      eureka.client.service-url.defaultZone: "http://discovery-service:${DISCOVERY_SERVER_PORT}/eureka"
+    networks:
+      - CLOUD_NETWORK

@@ -1,0 +1,168 @@
+==== Release auth-server-5.0.1 === (Revision: g_master#cbfc16e7) ====================================
+Date: May-21-2019
+New Features:
+Bug Fixes:. 
+- delete bug fix
+==== Release auth-server-5.0.0 === (Revision: g_master#8e19b545) ====================================
+Date: January-07-2019
+New Features:
+- add permission management with json
+- save url to permission map to DB
+
+Bug Fixes:
+
+Compatible Components:
+- Audit-Server version 3.0.1 and higher versions
+
+==== Release auth-server-4.0.2 === (Revision: g_master#8906ce13) ====================================
+Date: December-22-2018
+Bug Fixes:
+- change source address to remote address in audit
+- change page CTO object for audit
+ 
+Compatible Components:
+- Audit-Server version 3.0.1 and higher versions
+
+==== Release auth-server-4.0.1 === (Revision: g_master#93a82239) ====================================
+Date: December-08-2018
+New Features:
+- remove create and update and delete and read permissions
+- find all permissions using create role or update role or read role permission
+
+Bug Fixes:
+
+Compatible Components:
+- Audit-Server version 3.0.1 and higher versions
+==== Release auth-server-4.0.0 === (Revision: g_master#43dfd8f3) ====================================
+Date: September-29-2018
+New Features:
+- added logout api
+- added automatic logout after delete
+- enhancements in login audits
+
+Bug Fixes:
+- bug fix in non-superadmin permissions.
+- bug fix in delete state
+
+Compatible Components:
+- Audit-Server version 3.0.1 and higher versions
+
+
+==== Release auth-server-3.2.0 === (Revision: g_master#5de75f6d) ====================================
+Date: August-25-2018
+New Features:
+- Enhancements in audit logs.
+
+Bug Fixes:
+- Fixed Bug in Integration with audit-server.
+- Fixed user self-delete bug.
+
+Compatible Components:
+- Audit-Server version 3.0.0
+
+
+==== Release auth-server-3.0.0 === (Revision: g_master#bed0832e) ====================================
+Date: July-08-2018
+New Features:
+- Separate admin API and User API
+- Security Enhancements
+- API Enhancements
+
+Bug Fixes:
+
+==== Release auth-server-2.1.2 === (Revision: g_master#0c796e77) ====================================
+Date: July-07-2018
+New Features:
+
+
+Bug Fixes:
+- Fixed bug in password expiration.
+==== Release auth-server-2.1.1 === (Revision: g_master#82e6d11c) ====================================
+Date: June-24-2018
+New Features:
+
+Bug Fixes:
+- fixed audit integration bug
+
+
+==== Release auth-server-2.1.0 === (Revision: g_master#748ea200) ====================================
+Date: June-20-2018
+New Features:
+- Added Block Inactive User Feature.
+- Enhancements in APIs.
+Bug Fixes:
+
+==== Release auth-server-2.0.0 === (Revision: g_master#98626959) ====================================
+Date: June-13-2018
+New Features:
+- Added Password Validation Criteria.
+- Added Password Expiration.
+- Added Password Encoding.
+- Added User Block.
+
+Bug Fixes:
+- Fixed Security Bugs.
+
+Compatible Components:
+
+==== Release auth-server-1.1.3 === (Revision: g_master#99933b05) ====================================
+Date: May-06-2018
+New Features:
+
+Bug Fixes:
+- fix total counts
+- fix authentication bug
+
+Compatible Components:
+
+==== Release auth-server-1.1.2 === (Revision: g_master#535076e4) ====================================
+Date: January-31-2018
+New Features:
+- check token enabled
+Bug Fixes:
+- duplicate client data in response
+
+==== Release auth-server-1.1.1 === (Revision: g_master#28847a3f) ====================================
+Date: January-13-2018
+New Features:
+
+Bug Fixes:
+- Bug fixed in paging
+==== Release auth-server-1.1.0 === (Revision: g_master#5a81eaa8) ====================================
+Date: January-09-2018
+New Features:
+- Add user management functionality for multiple clients
+
+Bug Fixes:
+
+==== Release auth-server-1.0.3 === (Revision: g_master#e09e0a84) ====================================
+Date: December-04-2017
+New Features:
+- Enhancements in permissions
+- Support client requests
+
+Bug Fixes:
+
+==== Release auth-server-1.0.2 === (Revision: g_master#e09e0a84) ====================================
+Date: December-04-2017
+New Features:
+- Enhancements in permissions
+- Support client requests
+
+Bug Fixes:
+
+==== Release auth-server-1.0.1 === (Revision: g_master#e09e0a84) ====================================
+Date: December-04-2017
+New Features:
+- Enhancements in permissions
+- Support client requests
+
+Bug Fixes:
+
+==== Release auth-server-1.0.0 === (Revision: g_master#bde9ac18) ====================================
+Date: October-10-2017
+New Features:
+- Permission management
+- Docker version
+
+Bug Fixes:

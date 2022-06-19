@@ -1,0 +1,590 @@
+<!doctype html>
+<html>
+<head>
+    <title></title>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" />
+    <link href="https://cdn.rawgit.com/rastikerdar/vazir-font/v19.0.0/dist/font-face.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">*,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Vazir, Tahoma, Arial, sans-serif;
+        font-weight: 300;
+        font-size: 16px;
+        padding: 0;
+        margin: 0;
+        color: #000000;
+        background: #fff;
+        height: 100%;
+        position: relative;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        -ms-overflow-style: scrollbar;
+        overflow-x: hidden;
+    }
+
+    .container {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto
+    }
+
+    @media (min-width: 576px) {
+        .container {
+            max-width: 540px
+        }
+    }
+
+    @media (min-width: 768px) {
+        .container {
+            max-width: 720px
+        }
+    }
+
+    @media (min-width: 992px) {
+        .container {
+            max-width: 960px
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .container {
+            max-width: 1140px
+        }
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+
+    @media screen and (max-width: 768px) {
+        body {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+    }
+
+    a {
+        -webkit-transition: 0.5s;
+        -o-transition: 0.5s;
+        transition: 0.5s;
+        text-decoration: none;
+    }
+
+    a:hover,
+    a:active,
+    a:focus {
+        color: #52d3aa;
+        outline: none;
+        text-decoration: none;
+    }
+
+    p {
+        margin-bottom: 1.5em;
+        text-align: right;
+        line-height: 2;
+    }
+
+    pre {
+        padding: 1.5em;
+        color: #dbd8da;
+        background: #2c3747;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 1.2;
+        overflow-x: auto;
+        border-radius: 10px;
+        box-shadow: 0px 4px 14px rgba(41, 55, 72, 0.4);
+    }
+
+    code {
+        font-family: "Courier New", Courier, monospace;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: Vazir, Tahoma, Arial, sans-serif;
+        color: #000;
+        margin: 30px 0;
+        text-align: right;
+        position: relative
+    }
+
+    h3 {
+        padding-right: 15px;
+    }
+
+    h4 {
+        padding-right: 22px;
+    }
+
+    h1:first-child {
+        color: #2c3747;
+        font-size: 28px;
+        border-bottom: 1px solid #bfbfbf;
+        padding-bottom: 25px;
+    }
+
+    h3:after {
+        content: '';
+        display: block;
+        width: 5px;
+        height: 100%;
+        background-color: #52d3aa;
+        position: absolute;
+        right: 0;
+        top: 0;
+        border-radius: 4px;
+    }
+
+    h4:after {
+        content: '';
+        display: block;
+        width: 5px;
+        height: 100%;
+        background-color: #52d3aa;
+        position: absolute;
+        right: 0;
+        top: 0;
+        border-radius: 4px;
+    }
+
+    h4:before {
+        content: '';
+        display: block;
+        width: 5px;
+        height: 100%;
+        background-color: #52d3aa;
+        position: absolute;
+        right: 6px;
+        top: 0;
+        border-radius: 4px;
+    }
+
+    ::-moz-selection {
+        color: #fff;
+        background: #52d3aa;
+    }
+
+    ::selection {
+        color: #fff;
+        background: #52d3aa;
+    }
+
+    @media screen and (max-width: 768px) {
+        .table-responsive table {
+            width: 100%;
+            margin-bottom: 0;
+        }
+
+        .table-responsive {
+            margin-bottom: 45px;
+        }
+
+        .row {
+            margin-right: 0;
+            margin-left: 0;
+        }
+    }
+
+    table {
+        border-radius: 5px;
+        margin-bottom: 45px;
+        border: 1px solid rgba(0, 0, 0, 0.17);
+        transition: all ease 0.25S;
+        background: #fff;
+    }
+
+    .table-responsive {
+        overflow-x: auto
+    }
+
+    td,
+    th {
+        padding: 10px;
+        background-color: #fff;
+        border-bottom: 1px solid #dddddd;
+        line-height: 1.5;
+        font-size: 15px;
+    }
+
+    tr:last-child td {
+        border-bottom: none;
+    }
+
+    tr td:first-child {
+        background-color: #eee
+    }
+
+    .green tr td:first-child {
+        background-color: #d4edda
+    }
+
+    .red tr td:first-child {
+        background-color: #f8d7da
+    }
+
+    tr td:last-child {
+        text-align: right;
+        direction: rtl;
+    }
+    .info-note{
+        background: #A5E4FB;
+        padding: 17px;
+        border-radius: 5px;
+        border: 1px solid #03ABE8;
+    }
+    .success-note{
+        background: #c1f0e4;
+        padding: 17px;
+        border-radius: 5px;
+        border: 1px solid #5bad99;
+    }
+    .warning-note{
+        background: #F9DC88;
+        padding: 17px;
+        border-radius: 5px;
+        border: 1px solid #E59A04;
+    }
+    .error-note{
+        background: #FACDCC;
+        padding: 17px;
+        border-radius: 5px;
+        border: 1px solid #E80703;
+    }
+    .container{
+        border-bottom:1px solid #bfbfbf;
+        padding-bottom: 25px;
+    }
+    .footer{
+
+        text-align: center;
+        padding: 20px;
+    }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1 id="audit-server-4-0-2">‫‫مستند نصب و پیکربندی مولفه Auth-Server ورژن 5.0.0</h1>
+
+    <h2 id="prerequisites">پیش&zwnj;نیاز</h2>
+
+    <h3>نصب مولفه&zwnj;های داخلی پیک&zwnj;آسا</h3>
+
+    <p>‫برای نصب این برنامه نیاز دارید که ابتدا مولفه <a href="https://rep.peykasa.ir/index.php?dir=%2FRelease-Repository%2FUI-Framework%2FAudit-Server/">Audit-Server</a> را نصب کنید. نسخه&zwnj;های سازگار، <code>5.0.0</code> و بالاتر می&zwnj;باشند.</p>
+
+    <h3>‫نصب JDK</h3>
+
+    <p>‫مطمئن شوید که هر نسخه ای از&nbsp;java8 نصب شده&zwnj;است.</p>
+
+    <pre>
+<code>$ java -version
+java version &quot;1.8.0_31&quot;
+Java(TM) SE Runtime Environment (build 1.8.0_31-b13)
+Java HotSpot(TM) 64-Bit Server VM (build 25.31-b07, mixed mode)</code></pre>
+
+    <h2 id="db">‫ایجاد دیتابیس MySQL</h2>
+
+    <p>‫مطمئن شوید که نسخه ی 5.5&nbsp;MySQL&nbsp; بالاتر بر روی سیستم نصب شده&zwnj;است. درصورتی&zwnj;که نصب نیست، می&zwnj;توانید با دستور زیر آن را نصب و اجرا کنید.</p>
+
+    <pre>
+<code>sudo apt-get install mysql-server
+sudo service mysql start
+sudo /usr/sbin/update-rc.d mysql defaults</code></pre>
+
+    <h3 id="database-preparation">‫آماده&zwnj;سازی دیتابیس</h3>
+
+    <p>‫1- دستور زیر را بر روی سرور MYSQL&nbsp; &nbsp;اجرا کنید:</p>
+
+    <pre style="background-color:#ffffff;color:#000000;font-family:'Courier New';font-size:9.0pt;">
+mysql --verbose -u${DBA_USER} -h ${DBSERVER} -p${DBA_PWD} -e &quot;create database auth_server DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci;&quot; &gt; auth-server.log 2&gt;&amp;1</pre>
+
+    <table border="1" cellpadding="1" cellspacing="1" style="width:100%;">
+        <tbody>
+        <tr>
+            <td>DBSERVER=localhost</td>
+            <td>آدرس ای پی سرور MYSQL</td>
+        </tr>
+        <tr>
+            <td>DBA_USER=root</td>
+            <td>نام کاربری کاربر مدیرMYSQL</td>
+        </tr>
+        <tr>
+            <td>DBA_PWD</td>
+            <td>رمز عبور کاربر مدیر MYSQL</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <p dir="rtl">اگر خطایی باشد در فایل auth_server.log می توانید مشاهده کنید.</p>
+
+    <h2>نصب برنامه</h2>
+
+    <p>‫‫فایل نصب را از <a href="http://rep.peykasa.ir/Release-Repository/UI-Framework/Auth-Server">repository شرکت</a> ‫دریافت کنید. این فایل را در پوشه <code>/tmp/auth-server/</code> از حالت فشرده خارج نموده و فایل <code>install.sh</code> را از درون آن اجرا کنید.</p>
+
+    <h2 id="configuration">پیکربندی</h2>
+
+    <p>‫‫‫فایل <code>application.properties</code> که در پوشه <code>config</code> قرار دارد، حاوی پیکربندی&zwnj;های اصلی برنامه می&zwnj;باشد. این پیکربندی&zwnj;ها در زیر شرح داده&zwnj;شده&zwnj;اند:</p>
+
+    <h3 id="general-configuration">‫پیکربندی&zwnj;های عمومی</h3>
+
+    <div class="table-responsive">
+        <table>
+            <tbody>
+            <tr>
+                <td>server.port</td>
+                <td>‫‫پورت اجرای برنامه</td>
+            </tr>
+            <tr>
+                <td>server.address</td>
+                <td>‫‫‫آدرس اجرای برنامه؛ ‫‫‫در صورتی که نیاز دارید این مولفه از سرورهای دیگر قابل دسترسی باشد، باید مقدار این پارامتر را برابر <code>0.0.0.0</code> قرار دهید.</td>
+            </tr>
+            <tr>
+                <td>logging.level.root</td>
+                <td>‫‫‫سطح لاگ برنامه</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 id="pass-expiration-configuration">‫پیکربندی زمان انقضای Password</h3>
+
+    <div class="table-responsive">
+        <table>
+            <thead>
+            <tr>
+                <th>نام کانفیگ</th>
+                <th>شرح</th>
+                <th>مقادیر قابل قبول</th>
+                <th>‫مثال</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>app.user.password.expireTime</td>
+                <td>‫‫‫مدت زمان اعتبار Password</td>
+                <td>Descriptive Time</td>
+                <td>30d</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p class="warning-note">‫پیکربندی&zwnj;های تعیین&zwnj;شده برای مدت زمان انقضای Password تنها برای کاربرانی اعمال می&zwnj;شود که پس از فعال&zwnj;سازی این کانفیگ ایجاد یا آپدیت شده&zwnj;اند. زمان انقضای Password کاربران قبلی باید به صورت دستی در دیتابیس آپدیت شود.</p>
+
+    <p class="error-note">‫به هیچ وجه برای کاربر admin زمان expiration تنظیم نکنید.</p>
+
+    <h3 id="pass-validation-configuration">‫پیکربندی شروط اعتبار Password</h3>
+
+    <div class="table-responsive">
+        <table>
+            <thead>
+            <tr>
+                <th>نام کانفیگ</th>
+                <th>شرح</th>
+                <th>مقادیر قابل قبول</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>app.validation.password.maxLength</td>
+                <td>‫‫‫‫حداکثر طول قابل قبول برای Password</td>
+                <td>‫اعداد مثبت</td>
+            </tr>
+            <tr>
+                <td>app.validation.password.minLength</td>
+                <td>‫‫‫‫حداقل طول قابل قبول برای Password</td>
+                <td>‫اعداد مثبت</td>
+            </tr>
+            <tr>
+                <td>app.validation.password.hasUpper</td>
+                <td>‫Password شامل کاراکتر Uppercase باشد یا خیر</td>
+                <td>‫true/false</td>
+            </tr>
+            <tr>
+                <td>app.validation.password.hasLower</td>
+                <td>‫Password شامل کاراکتر Lowercase باشد یا خیر</td>
+                <td>‫true/false</td>
+            </tr>
+            <tr>
+                <td>app.validation.password.hasDigit</td>
+                <td>‫Password شامل رقم باشد یا خیر</td>
+                <td>‫true/false</td>
+            </tr>
+            <tr>
+                <td>app.validation.password.hasSpecial</td>
+                <td>‫Password شامل کاراکترهای خاص باشد یا خیر</td>
+                <td>‫true/false</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 id="pass-encryption-configuration">‫‫پیکربندی رمزنگاری Password</h3>
+
+    <p>‫به وسیله کانفیگ&zwnj;های این بخش، می&zwnj;توان از ورود کاربرهایی که برای مدت زمان مشخصی از سیستم استفاده نکرده&zwnj;اند، جلوگیری کرد. امکان فعال&zwnj;سازی و ورود مجدد کاربر به سیستم باید از طرف admin به کاربر داده شود.</p>
+
+    <div class="table-responsive">
+        <table>
+            <thead>
+            <tr>
+                <th>نام کانفیگ</th>
+                <th>شرح</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>app.password.encoder</td>
+                <td>‫‫نوع رمزنگاری Password برای ذخیره در دیتابیس</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p>‫مقادیر قابل قبول در زیر شرح داده&zwnj;شده&zwnj;اند:</p>
+
+    <div class="table-responsive">
+        <table>
+            <tbody>
+            <tr>
+                <td>plain</td>
+                <td>‫بدون رمزنگاری</td>
+            </tr>
+            <tr>
+                <td>encrypt</td>
+                <td>‫رمزنگاری قابل بازگشت</td>
+            </tr>
+            <tr>
+                <td>hash</td>
+                <td>رمزنگاری غیر قابل بازگشت</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p class="warning-note">‫رمزنگاری تعیین&zwnj;شده تنها برای کاربرانی اعمال می&zwnj;شود که پس از فعال&zwnj;سازی این کانفیگ ایجاد یا آپدیت شده&zwnj;اند. Passwordهای کاربران قبلی باید به صورت دستی در دیتابیس آپدیت شوند.</p>
+
+    <h3 id="invalid-login-configuration">‫پیکربندی بلاک برای ورودهای ناموفق</h3>
+
+    <p>‫به وسیله کانفیگ&zwnj;های این بخش، می&zwnj;توان loginهای ناموفق کاربران را کنترل کرد؛ در صورتی که کاربری به&zwnj;صورت متوالی اطلاعات نادرست برای login وارد کند، برای مدت مشخصی از ورود او به سیستم جلوگیری خواهدشد.</p>
+
+    <div class="table-responsive">
+        <table>
+            <thead>
+            <tr>
+                <th>نام کانفیگ</th>
+                <th>شرح</th>
+                <th>مقادیر قابل قبول</th>
+                <th>‫مثال</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>app.user.password.invalidCount</td>
+                <td>‫‫‫‫حداکثر تعداد دفعات متوالی که کاربر می&zwnj;تواند password غلط برای login استفاده کند.</td>
+                <td>‫اعداد مثبت</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>app.user.password.invalidCountIntervalTime</td>
+                <td>‫‫‫‫مدت زمان block کاربر پس از این که بیش از تعداد مجاز password غلط برای ورود به سیستم استفاده کند.</td>
+                <td>Descriptive Time</td>
+                <td>24h</td>
+            </tr>
+            <tr>
+                <td>app.user.password.ignoreInvalidCountIntervalTime</td>
+                <td>‫مدت زمان انقضای وضعیت block کاربر؛ در صورتی که کاربر به اندازه این کانفیگ وارد سیستم نشود، مقادیر پیشین مربوط به لاگین&zwnj;های اشتباه او در سیستم reset می&zwnj;شود.</td>
+                <td>Descriptive Time</td>
+                <td>2d</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 id="inactive-user-configuration">‫‫پیکربندی بلاک کاربر Inactive</h3>
+
+    <p>‫به وسیله کانفیگ&zwnj;های این بخش، می&zwnj;توان از ورود کاربرهایی که برای مدت زمان مشخصی از سیستم استفاده نکرده&zwnj;اند، جلوگیری کرد. امکان فعال&zwnj;سازی و ورود مجدد کاربر به سیستم باید از طرف admin به کاربر داده شود.</p>
+
+    <div class="table-responsive">
+        <table>
+            <thead>
+            <tr>
+                <th>نام کانفیگ</th>
+                <th>شرح</th>
+                <th>مقادیر قابل قبول</th>
+                <th>‫مثال</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>app.user.max.inactiveTime</td>
+                <td>‫مدت زمانی که عدم ورود کاربر به سیستم موجب غیرفعال شدن آن می&zwnj;شود.</td>
+                <td>Descriptive Time</td>
+                <td>24d</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 id="Audit-configuration">‫پیکربندی اتصال به مولفه Audit-Server</h3>
+
+    <div class="table-responsive">
+        <table>
+            <tbody>
+            <tr>
+                <td>app.audit.remote.dest</td>
+                <td>‫آدرس اتصال به مولفه Audit-Server</td>
+            </tr>
+            <tr>
+                <td>‫نمونه</td>
+                <td>http://192.168.100.100:1999/audit-server/v3/api/log</td>
+            </tr>
+            <tr>
+                <td>‫غیرفعال کردن</td>
+                <td>‫برای غیرفعال کردن کارکرد Audit، کافیست کانفیگ <code>app.audit.remote.dest</code> را با قراردادن یک کاراکتر <code>#</code> در ابتدای خط، کامنت کنید.</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 dir="rtl">مدیریت دسترسی ها</h3>
+
+    <p dir="rtl">قبل&nbsp; از راه اندازی سیستم باید فایل <a href="https://rep.peykasa.ir/Release-Repository/UI-Framework/Auth-Server/permissions-interface-guide.html">permissions-auth.json</a> که در بسته ی&nbsp; نصب وجود دارد ، در دیتابیس وارد شود.برای این کار راهنمای <a href="https://rep.peykasa.ir/Release-Repository/UI-Framework/Auth-Server/permission-importer-user-guide.html" target="_blank">permission-importer</a> مطالعه شود.</p>
+
+    <h3 id="deployment">راه&zwnj;اندازی</h3>
+
+    <p>‫‫اجرا و توقف برنامه از طریق سرویس انجام می&zwnj;گیرد:</p>
+
+    <pre>
+<code>/etc/init.d/pa-auth-server start
+/etc/init.d/pa-auth-server stop
+</code></pre>
+
+    <h3 id="logtail">مشاهده لاگ</h3>
+
+    <p>‫‫‫لاگ سیستم در شاخه log در محل نصب ذخیره می شود:</p>
+
+    <pre>
+<code>tail -f /usr/local/PeykAsa/auth-server-4.0.0/log/pa-auth-server.log</code></pre>
+
+    <h3><code>نکته</code></h3>
+
+    <p dir="rtl"><span style="text-align: right;">1-&nbsp;در این نسخه هر کاربری که از نوعsuper admin باشد نیازی به داشتن سطح دسترسی های سیستم نیست .</span></p>
+</div>
+
+<div class="footer"><a href="http://peykasa.com">&copy;2018 Peykasa</a></div>
+</body>
+</html>

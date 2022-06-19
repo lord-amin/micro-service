@@ -1,0 +1,111 @@
+{
+    "permissions": [
+        {
+            "name": "sms_firewall",
+            "title": "SMS Firewall",
+            "desc": "SMS Firewall",
+            "permissions": [
+                {
+                    "name": "reporting",
+                    "title": "Reporting",
+                    "desc": "Reporting Permissions",
+                    "permissions": [
+                        {
+                            "name": "gray_route",
+                            "title": "Gray Route Report",
+                            "desc": "Gray Route Report Permissions",
+                            "apiList": [
+                                {
+                                    "method": "get",
+                                    "url": "reporting-api/v1/last_gray_route_detection_result"
+                                },
+                                {
+                                    "method": "get",
+                                    "url": "reporting-api/v1/last_gray_route_attack_list"
+                                },
+                                {
+                                    "method": "get",
+                                    "url": "reporting-api/v1/last_gray_route_attack_list"
+                                },
+                                {
+                                    "method": "get",
+                                    "url": "reporting-api/v1/msisdns"
+                                },
+                                {
+                                    "method": "get",
+                                    "url": "reporting-api/v1/msisdn-send-counts"
+                                },
+                                {
+                                    "method": "get",
+                                    "url": "reporting-api/v1/operators-ratio"
+                                },
+                                {
+                                    "method": "get",
+                                    "url": "reporting-api/v1/operator-ratios"
+                                },
+                                {
+                                    "method": "get",
+                                    "url": "reporting-api/v1/operators-info"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "abnormal",
+                            "title": "Abnormal Report",
+                            "desc": "Abnormal Report Permissions",
+                            "apiList": [
+                                {
+                                    "method": "get",
+                                    "url": "reporting-api/v1/recent-abnormal-load-attacks"
+                                },
+                                {
+                                    "method": "get",
+                                    "url": "reporting-api/v1/operator-inbound-messages"
+                                },
+                                {
+                                    "method": "get",
+                                    "url": "reporting-api/v1/operators-info"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "setting",
+                    "title": "Setting",
+                    "desc": "Setting Permissions",
+                    "apiList": [
+                        {
+                            "method": "get",
+                            "url": "lists/gray"
+                        },
+                        {
+                            "method": "delete",
+                            "url": "lists/gray"
+                        },
+                        {
+                            "method": "get",
+                            "url": "settings/SMSFirewall/**"
+                        },
+                        {
+                            "method": "post",
+                            "url": "settings/SMSFirewall/**"
+                        },
+                        {
+                            "method": "delete",
+                            "url": "settings/SMSFirewall/**"
+                        },
+                        {
+                            "method": "put",
+                            "url": "settings/SMSFirewall/**"
+                        },
+                        {
+                            "method": "patch",
+                            "url": "settings/SMSFirewall/**"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

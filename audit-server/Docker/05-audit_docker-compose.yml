@@ -1,0 +1,25 @@
+version: '3.7'
+networks:
+  CLOUD_NETWORK:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 100.10.10.1/8
+services:
+  audit-server:
+    image: gitlab.peykasa.ir:4567/jlibraries/cloud:${AUDIT_TAG}
+    logging:
+      driver: "json-file"
+      options:
+        max-file: "100"
+        max-size: "1000m"
+    ports:
+      - "${AUDIT_SERVER_PORT}:${AUDIT_SERVER_PORT}"
+    environment:
+      server.port: ${AUDIT_SERVER_PORT}
+      spring.application.name: "${AUDIT_APP_NAME}"
+      eureka.client.service-url.defaultZone: "http://discovery-service:${DISCOVERY_SERVER_PORT}/eureka"
+      spring.cloud.config.discovery.service-id: "${CONFIG_APP_NAME}"
+    networks:
+      - CLOUD_NETWORK

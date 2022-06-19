@@ -1,0 +1,455 @@
+<!doctype html>
+<html>
+<head>
+    <title></title>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" />
+    <link href="https://cdn.rawgit.com/rastikerdar/vazir-font/v19.0.0/dist/font-face.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">.container{
+        width: 95%;
+        box-shadow: 0 0 5px lightgray;
+    }
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    table {
+        border-radius: 5px;
+        margin-bottom: 45px;
+        border: 1px solid rgba(0, 0, 0, 0.17);
+        transition: all ease 0.25S;
+        background: #fff;
+    }
+
+    .table-responsive {
+        overflow-x: auto
+    }
+
+    table > thead > tr td,
+    th {
+        padding: 10px;
+        background-color: lightgray;
+        border: 1px solid #dddddd;
+        line-height: 1.5;
+        font-size: 15px;
+    }
+
+    td {
+        padding: 10px;
+        background-color: #e1e4fd;
+        border: 1px solid white;
+        line-height: 1.5;
+        font-size: 15px;
+
+    }
+
+    tr:last-child td {
+        border-bottom: none;
+    }
+
+    body {
+        font-family: Vazir, Tahoma, Arial, sans-serif;
+        font-weight: 300;
+        font-size: 16px;
+        padding: 0;
+        margin: 0;
+        color: #000000;
+        background: #fff;
+        height: 100%;
+        position: relative;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        -ms-overflow-style: scrollbar;
+        overflow-x: hidden;
+    }
+
+    .container {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto
+    }
+
+    @media (min-width: 576px) {
+        .container {
+            max-width: 540px
+        }
+    }
+
+    @media (min-width: 768px) {
+        .container {
+            max-width: 720px
+        }
+    }
+
+    @media (min-width: 992px) {
+        .container {
+            max-width: 960px
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .container {
+            max-width: 1140px
+        }
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+
+    @media screen and (max-width: 768px) {
+        body {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+    }
+
+    a {
+        -webkit-transition: 0.5s;
+        -o-transition: 0.5s;
+        transition: 0.5s;
+        text-decoration: none;
+    }
+
+    a:hover,
+    a:active,
+    a:focus {
+        color: #52d3aa;
+        outline: none;
+        text-decoration: none;
+    }
+
+    p {
+        margin-bottom: 1.5em;
+        text-align: right;
+        line-height: 2;
+    }
+
+    pre {
+        padding: 1.5em;
+        color: #dbd8da;
+        background: #2c3747;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 1.2;
+        overflow-x: auto;
+        border-radius: 10px;
+        box-shadow: 0px 4px 14px rgba(41, 55, 72, 0.4);
+    }
+
+    code {
+        font-family: "Courier New", Courier, monospace;
+    }
+
+    ::-moz-selection {
+        color: #fff;
+        background: #52d3aa;
+    }
+
+    ::selection {
+        color: #fff;
+        background: #52d3aa;
+    }
+
+    @media screen and (max-width: 768px) {
+        .table-responsive table {
+            width: 100%;
+            margin-bottom: 0;
+        }
+
+        .table-responsive {
+            margin-bottom: 45px;
+        }
+
+        .row {
+            margin-right: 0;
+            margin-left: 0;
+        }
+    }
+
+    table {
+        border-radius: 5px;
+        margin-bottom: 45px;
+        border: 1px solid rgba(0, 0, 0, 0.17);
+        transition: all ease 0.25S;
+        background: #fff;
+    }
+
+    .table-responsive {
+        overflow-x: auto
+    }
+
+    .green tr td:first-child {
+        background-color: #d4edda
+    }
+
+    .red tr td:first-child {
+        background-color: #f8d7da
+    }
+
+    tr td:last-child {
+        text-align: right;
+        direction: rtl;
+    }
+
+    .info-note {
+        background: #A5E4FB;
+        padding: 17px;
+        border-radius: 5px;
+        border: 1px solid #03ABE8;
+    }
+
+    .success-note {
+        background: #c1f0e4;
+        padding: 17px;
+        border-radius: 5px;
+        border: 1px solid #5bad99;
+    }
+
+    .warning-note {
+        background: #F9DC88;
+        padding: 17px;
+        border-radius: 5px;
+        border: 1px solid #E59A04;
+    }
+
+    .error-note {
+        background: #FACDCC;
+        padding: 17px;
+        border-radius: 5px;
+        border: 1px solid #E80703;
+    }
+
+    .container {
+        border-bottom: 1px solid #bfbfbf;
+        padding-bottom: 25px;
+    }
+
+    .footer {
+
+        text-align: center;
+        padding: 20px;
+    }
+    </style>
+</head>
+<body>
+<div class="container" style="text-align: left;">
+    <h1 dir="rtl" id="omc-reporter-13.2.0" style="text-align: right;">‫‫‫‫مستند راهنمای توسعه دهنده مولفه audit-server ورژن 5.0.0</h1>
+
+    <h2 id="prerequisites" style="text-align: right;">معرفی وب سرویس ها</h2>
+
+    <p style="text-align: right;">در صورتی که ویژگی های زیر در نرم افزار با مقادیر ذکر شده پیکر بندی شوند سرویس های که در ادامه ذکر خواهند شد را خواهیم داشت</p>
+
+    <pre>
+<strong>server.servlet.contextPath</strong>=<span style="color:#FF0000;"><em><strong>/audit-server/v5</strong></em><em style="color: blueviolet">
+</em></span></pre>
+
+    <div style="text-align: right;">
+        <hr /></div>
+
+    <h4 style="text-align: right;">سرویس ورود لاگ ها</h4>
+
+    <table border="0" cellpadding="0" cellspacing="0" style="width:100%;">
+        <thead>
+        <tr>
+            <th scope="col" style="text-align: center;">HTTP Method</th>
+            <th scope="col" style="text-align: center;">URL</th>
+            <th scope="col" style="text-align: center;">Request body</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td style="text-align: center;">POST</td>
+            <td style="text-align: center;">http://{host}:{port}<span style="color:#FF0000;">/audit-server/v5/</span>action/logs</td>
+            <td style="text-align: center;"><a href="#audit-model">AuditModel</a></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div dir="rtl" style="width:100%">
+        <hr />
+        <h4 style="text-align: right;">سرویس جستجوی لاگ ها</h4>
+
+        <table border="0" cellpadding="0" cellspacing="0" dir="ltr" style="width:100%;">
+            <thead>
+            <tr>
+                <th scope="col" style="text-align: center;">HTTP Method</th>
+                <th scope="col" style="text-align: center;">URL</th>
+                <th scope="col" style="text-align: center;">Request body</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td style="text-align: center;">POST</td>
+                <td style="text-align: center;">http://{host}:{port}<span style="color:#FF0000;">/audit-server/v5/</span>action/logs/search</td>
+                <td style="text-align: center;"><a href="#search-cto">SearchCTO</a></td>
+            </tr>
+            </tbody>
+        </table>
+
+        <hr />
+        <h4 style="text-align: right;">سرویس لیست رخدادهای موجود در لاگ ها</h4>
+
+        <table border="0" cellpadding="0" cellspacing="0" dir="ltr" style="width:100%;">
+            <thead>
+            <tr>
+                <th scope="col" style="text-align: center;">HTTP Method</th>
+                <th scope="col" style="text-align: center;">URL</th>
+                <th scope="col" style="text-align: center;">Request body</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td style="text-align: center;">GET</td>
+                <td style="text-align: center;">http://{host}:{port}<span style="color:#FF0000;">/audit-server/v5/</span>action/logs/search/events</td>
+                <td style="text-align: center;">-</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <hr />
+        <p>سرویس لیست کاربران موجود در لاگ ها</p>
+
+        <table border="0" cellpadding="0" cellspacing="0" dir="ltr" style="width:100%;">
+            <thead>
+            <tr>
+                <th scope="col" style="text-align: center;">HTTP Method</th>
+                <th scope="col" style="text-align: center;">URL</th>
+                <th scope="col" style="text-align: center;">Request body</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td style="text-align: center;">GET</td>
+                <td style="text-align: center;">http://{host}:{port}<span style="color:#FF0000;">/audit-server/v5/</span>action/logs/search/users</td>
+                <td style="text-align: center;">-</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <hr />
+        <p>سرویس لیست بخش های موجود در لاگ ها</p>
+
+        <table border="0" cellpadding="0" cellspacing="0" dir="ltr" style="width:100%;">
+            <thead>
+            <tr>
+                <th scope="col" style="text-align: center;">HTTP Method</th>
+                <th scope="col" style="text-align: center;">URL</th>
+                <th scope="col" style="text-align: center;">Request body</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td style="text-align: center;">GET</td>
+                <td style="text-align: center;">http://{host}:{port}<span style="color:#FF0000;">/audit-server/v5/</span>action/logs/search/contexts</td>
+                <td style="text-align: center;">-</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <p>&nbsp;</p>
+
+        <hr />
+        <h4 dir="ltr" style="text-align: left;"><a id="audit-model" name="audit-model">AuditModel</a></h4>
+
+        <pre class="body-param__example microlight" dir="ltr" style="box-sizing: border-box; font-family: &quot;Source Code Pro&quot;, monospace; font-size: 12px; margin: 0px; padding: 10px; white-space: pre-wrap; word-break: break-word; border-radius: 4px; background: rgb(65, 68, 78); overflow-wrap: break-word; font-weight: 600; color: rgb(255, 255, 255); overflow-y: auto; max-height: 400px; min-height: 6em; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+<span style="color:#FFFFFF;"><span style="box-sizing: inherit;">{</span><span style="box-sizing: inherit; font-weight: bold;">
+  </span><span style="box-sizing: inherit;">&quot;actor&quot;</span><span style="box-sizing: inherit;">:</span><span style="box-sizing: inherit; font-weight: bold;"> </span><span style="box-sizing: inherit;">&quot;string&quot;</span><span style="box-sizing: inherit;">,</span><span style="box-sizing: inherit; font-weight: bold;">
+  </span><span style="box-sizing: inherit;">&quot;context&quot;</span><span style="box-sizing: inherit;">:</span><span style="box-sizing: inherit; font-weight: bold;"> </span><span style="box-sizing: inherit;">&quot;string&quot;</span><span style="box-sizing: inherit;">,</span><span style="box-sizing: inherit; font-weight: bold;">
+  </span><span style="box-sizing: inherit;">&quot;event&quot;</span><span style="box-sizing: inherit;">:</span><span style="box-sizing: inherit; font-weight: bold;"> </span><span style="box-sizing: inherit;">&quot;string&quot;</span><span style="box-sizing: inherit;">,</span><span style="box-sizing: inherit; font-weight: bold;">
+  </span><span style="box-sizing: inherit;">&quot;extraInfo&quot;</span><span style="box-sizing: inherit;">:</span><span style="box-sizing: inherit; font-weight: bold;"> </span><span style="box-sizing: inherit;">&quot;string&quot;</span><span style="box-sizing: inherit;">,</span><span style="box-sizing: inherit; font-weight: bold;">
+  </span><span style="box-sizing: inherit;">&quot;fromState&quot;</span><span style="box-sizing: inherit;">:</span><span style="box-sizing: inherit; font-weight: bold;"> </span><span style="box-sizing: inherit;">{</span><span style="box-sizing: inherit;">nested object}</span><span style="box-sizing: inherit;">,</span><span style="box-sizing: inherit; font-weight: bold;">
+  </span><span style="box-sizing: inherit;">&quot;remoteAddress&quot;</span><span style="box-sizing: inherit;">:</span><span style="box-sizing: inherit; font-weight: bold;"> </span><span style="box-sizing: inherit;">&quot;string&quot;</span><span style="box-sizing: inherit;">,</span><span style="box-sizing: inherit; font-weight: bold;">
+  </span><span style="box-sizing: inherit;">&quot;status&quot;</span><span style="box-sizing: inherit;">:</span><span style="box-sizing: inherit; font-weight: bold;"> </span><span style="box-sizing: inherit;">&quot;string&quot;</span><span style="box-sizing: inherit;">,</span><span style="box-sizing: inherit; font-weight: bold;">
+  </span><span style="box-sizing: inherit;">&quot;time&quot;</span><span style="box-sizing: inherit;">:</span><span style="box-sizing: inherit; font-weight: bold;"> </span><span style="box-sizing: inherit;">&quot;2019-01-06T12:33:39.980Z&quot;</span><span style="box-sizing: inherit;">,</span><span style="box-sizing: inherit; font-weight: bold;">
+  </span><span style="box-sizing: inherit;">&quot;toState&quot;</span><span style="box-sizing: inherit;">:</span><span style="box-sizing: inherit; font-weight: bold;"> </span><span style="box-sizing: inherit;">{</span><span style="box-sizing: inherit;">nested object}</span><span style="box-sizing: inherit; font-weight: bold;">
+</span><span style="box-sizing: inherit;">}</span></span></pre>
+
+        <hr />
+        <p style="text-align: left;"><em><strong>actor</strong></em></p>
+
+        <p>کسی که این لاگ را ایجاد کرده است.معمولا کاربری که به سیستم لاگین کرده.</p>
+
+        <hr />
+        <p dir="ltr" style="text-align: left;"><em><strong>context</strong></em></p>
+
+        <p style="text-align: right;">بخشی که این لاگ در آن ایجاد شده است.مثل بخش مدیریت کاربران</p>
+
+        <hr />
+        <p dir="ltr" style="text-align: left;"><em><strong>event</strong></em></p>
+
+        <p style="text-align: right;">رخداد متناظر . مثلا در بخش مدیریت کاربران وقتی یک کاربر ایجاد می شود این فیلد مقدار Create می گیرد</p>
+
+        <hr />
+        <p dir="ltr" style="text-align: left;"><em><strong>extraInfo</strong></em></p>
+
+        <p style="text-align: right;">هر نوع اطلاعات اضافی</p>
+
+        <hr />
+        <p dir="ltr" style="text-align: left;"><em><strong>fromState</strong></em></p>
+
+        <p style="text-align: right;">تغییر حالتی که اتفاق می افتد.مثلا وقتی تعدادی از فیلد های یک کاربر را بروز می کنیم این فیلد ها از حالتی به حالت دیگر تغییر می کنند.حالت اولیه در این فیلد قرار می گیرد.نکته قابل توجه اینست که باید مقدار این فیلد از نوع اشیا تو در تو باید و نمی توان مقادیر ثابت در آن قرار داد به طور مثال نمی توان مقدار رشته ی test را به صورت</p>
+
+        <p dir="ltr" style="text-align: left;">&quot;fromState&quot;:&quot;test&quot;</p>
+
+        <p style="text-align: right;">وارد کرد بلکه باید به صورت زیر باشد:</p>
+
+        <p dir="ltr" style="text-align: left;">fromState:{&quot;field&quot;:&quot;test&quot;}</p>
+
+        <hr />
+        <p dir="ltr" style="text-align: left;"><em><strong>remoteAddress</strong></em></p>
+
+        <p style="text-align: right;">ادرس آی پی جایی که لاگ از آن آمده است</p>
+
+        <hr />
+        <p dir="ltr" style="text-align: left;"><em><strong>status</strong></em></p>
+
+        <p style="text-align: right;">وضعیت رخداد مورد نظر . مثلا خطا یا هشدار</p>
+
+        <hr />
+        <p dir="ltr" style="text-align: left;"><em><strong>time</strong></em></p>
+
+        <p style="text-align: right;">زمانی که لاگ ایجاد شده است</p>
+
+        <hr />
+        <p dir="ltr" style="text-align: left;"><em><strong>toState</strong></em></p>
+
+        <p style="text-align: right;">همانند فیلد fromState با این تفاوت که حالت نهایی تغییرات را در خود دارد</p>
+
+        <hr />
+        <p dir="ltr" style="text-align: left;"><a id="search-cto" name="search-cto">SearchCTO</a></p>
+
+        <pre class="body-param__example microlight" dir="ltr" style="box-sizing: border-box; font-family: &quot;Source Code Pro&quot;, monospace; font-size: 12px; margin: 0px; padding: 10px; white-space: pre-wrap; word-break: break-word; border-radius: 4px; background: rgb(65, 68, 78); overflow-wrap: break-word; font-weight: 600; color: rgb(255, 255, 255); overflow-y: auto; max-height: 400px; min-height: 6em; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+<span style="color:#FFFFFF;"><span style="box-sizing: inherit;">{</span><span style="box-sizing: inherit; font-weight: bold;">
+  </span><span style="box-sizing: inherit;">&quot;actor&quot;</span><span style="box-sizing: inherit;">:</span><span style="box-sizing: inherit; font-weight: bold;"> </span><span style="box-sizing: inherit;">&quot;string&quot;</span><span style="box-sizing: inherit;">,</span><span style="box-sizing: inherit; font-weight: bold;">
+  </span><span style="box-sizing: inherit;">&quot;context&quot;</span><span style="box-sizing: inherit;">:</span><span style="box-sizing: inherit; font-weight: bold;"> </span><span style="box-sizing: inherit;">&quot;string&quot;</span><span style="box-sizing: inherit;">,</span><span style="box-sizing: inherit; font-weight: bold;">
+  </span><span style="box-sizing: inherit;">&quot;end&quot;</span><span style="box-sizing: inherit;">:</span><span style="box-sizing: inherit; font-weight: bold;"> </span><span style="box-sizing: inherit;">&quot;2019-01-06T12:49:06.226Z&quot;</span><span style="box-sizing: inherit;">,</span><span style="box-sizing: inherit; font-weight: bold;">
+  </span><span style="box-sizing: inherit;">&quot;event&quot;</span><span style="box-sizing: inherit;">:</span><span style="box-sizing: inherit; font-weight: bold;"> </span><span style="box-sizing: inherit;">&quot;string&quot;</span><span style="box-sizing: inherit;">,</span><span style="box-sizing: inherit; font-weight: bold;">
+  </span><span style="box-sizing: inherit;">&quot;extraInfo&quot;</span><span style="box-sizing: inherit;">:</span><span style="box-sizing: inherit; font-weight: bold;"> </span><span style="box-sizing: inherit;">&quot;string&quot;</span><span style="box-sizing: inherit;">,</span><span style="box-sizing: inherit; font-weight: bold;">
+  </span><span style="box-sizing: inherit;">&quot;orders&quot;</span><span style="box-sizing: inherit;">:</span><span style="box-sizing: inherit; font-weight: bold;"> </span><span style="box-sizing: inherit;">[</span><span style="box-sizing: inherit; font-weight: bold;">
+    </span><span style="box-sizing: inherit;">{</span><span style="box-sizing: inherit; font-weight: bold;">
+      </span><span style="box-sizing: inherit;">&quot;direction&quot;</span><span style="box-sizing: inherit;">:</span><span style="box-sizing: inherit; font-weight: bold;"> </span><span style="box-sizing: inherit;">&quot;ASC&quot;</span><span style="box-sizing: inherit;">,</span><span style="box-sizing: inherit; font-weight: bold;">
+      </span><span style="box-sizing: inherit;">&quot;property&quot;</span><span style="box-sizing: inherit;">:</span><span style="box-sizing: inherit; font-weight: bold;"> </span><span style="box-sizing: inherit;">&quot;string&quot;</span><span style="box-sizing: inherit; font-weight: bold;">
+    </span><span style="box-sizing: inherit;">}</span><span style="box-sizing: inherit; font-weight: bold;">
+  </span><span style="box-sizing: inherit;">]</span><span style="box-sizing: inherit;">,</span><span style="box-sizing: inherit; font-weight: bold;">
+  </span><span style="box-sizing: inherit;">&quot;page&quot;</span><span style="box-sizing: inherit;">:</span><span style="box-sizing: inherit; font-weight: bold;"> </span><span style="box-sizing: inherit; font-weight: bold;">0</span><span style="box-sizing: inherit;">,</span><span style="box-sizing: inherit; font-weight: bold;">
+  </span><span style="box-sizing: inherit;">&quot;remoteAddress&quot;</span><span style="box-sizing: inherit;">:</span><span style="box-sizing: inherit; font-weight: bold;"> </span><span style="box-sizing: inherit;">&quot;string&quot;</span><span style="box-sizing: inherit;">,</span><span style="box-sizing: inherit; font-weight: bold;">
+  </span><span style="box-sizing: inherit;">&quot;size&quot;</span><span style="box-sizing: inherit;">:</span><span style="box-sizing: inherit; font-weight: bold;"> </span><span style="box-sizing: inherit; font-weight: bold;">0</span><span style="box-sizing: inherit;">,</span><span style="box-sizing: inherit; font-weight: bold;">
+  </span><span style="box-sizing: inherit;">&quot;start&quot;</span><span style="box-sizing: inherit;">:</span><span style="box-sizing: inherit; font-weight: bold;"> </span><span style="box-sizing: inherit;">&quot;2019-01-06T12:49:06.226Z&quot;</span><span style="box-sizing: inherit;">,</span><span style="box-sizing: inherit; font-weight: bold;">
+  </span><span style="box-sizing: inherit;">&quot;status&quot;</span><span style="box-sizing: inherit;">:</span><span style="box-sizing: inherit; font-weight: bold;"> </span><span style="box-sizing: inherit;">&quot;string&quot;</span><span style="box-sizing: inherit; font-weight: bold;">
+</span><span style="box-sizing: inherit;">}</span></span></pre>
+
+        <p>به ازای هر کدام از فیلد خای بالا یک شرط به جستجو اضافه می شود.</p>
+
+        <p dir="ltr">&nbsp;</p>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<14>Dec 13 10:11:20 localhost auth-server: User 'admin' Logged in successfully
+<14>Dec 13 10:12:39 localhost auth-server: Client 'mst_client_id' created successfully by user 'admin'
+<14>Dec 13 11:00:38 localhost auth-server: User 'admin' Logged in successfully
+<14>Dec 13 11:01:34 localhost auth-server: Client 'mstX_client_id' created successfully by user 'admin'
+<14>Dec 13 11:04:47 localhost auth-server: Creating Client 'mstX_client_id' failed by user 'admin'
+<14>Dec 13 11:09:14 localhost auth-server: User 'admin' Logged in successfully
+<14>Dec 13 11:09:34 localhost auth-server: User 'b1' created successfully by user 'admin'
+<14>Dec 13 11:17:45 localhost auth-server: User 'b1' password changed successfully by user 'admin'
+<14>Dec 19 11:24:59 localhost auth-server: User 'b2b-user' Logged in successfully

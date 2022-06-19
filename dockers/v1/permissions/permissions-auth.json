@@ -1,0 +1,213 @@
+{
+  "permissions": [
+    {
+      "name": "client_management",
+      "title": "Client Management",
+      "desc": "Client Management",
+      "permissions": [
+        {
+          "name": "auth_server_client_read",
+          "title": "Client Read",
+          "desc": "Client Read",
+          "apiList": [
+            {
+              "method": "get",
+              "url": "/api/clients"
+            },
+            {
+              "method": "get",
+              "url": "/api/clients/list"
+            },
+            {
+              "method": "get",
+              "url": "/api/clients/user"
+            }
+          ]
+        },
+        {
+          "name": "auth_server_client_create",
+          "title": "Client Create",
+          "desc": "Client Create",
+          "apiList": [
+            {
+              "method": "post",
+              "url": "/api/clients"
+            }
+          ]
+        },
+        {
+          "name": "auth_server_client_update",
+          "title": "Client Update",
+          "desc": "Client Update",
+          "apiList": [
+            {
+              "method": "put",
+              "url": "/api/clients"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "user_management",
+      "title": "User Management",
+      "desc": "User Management",
+      "permissions": [
+        {
+          "name": "auth_server_user_read",
+          "title": "User Read",
+          "desc": "User Read",
+          "apiList": [
+            {
+              "method": "get",
+              "url": "/api/users"
+            },
+            {
+              "method": "get",
+              "url": "/api/users/*"
+            },
+            {
+              "method": "get",
+              "url": "/api/users/deleted"
+            },
+            {
+              "method": "get",
+              "url": "/api/users/*/roles"
+            }
+          ]
+        },
+        {
+          "name": "auth_server_user_create",
+          "title": "User Create",
+          "desc": "User Create",
+          "apiList": [
+            {
+              "method": "post",
+              "url": "/api/users"
+            }
+          ]
+        },
+        {
+          "name": "auth_server_user_update",
+          "title": "User Update",
+          "desc": "User Update",
+          "apiList": [
+            {
+              "method": "put",
+              "url": "/api/users"
+            }
+          ]
+        },
+        {
+          "name": "auth_server_user_change_pass",
+          "title": "User Change Password",
+          "desc": "User Change Password",
+          "apiList": [
+            {
+              "method": "patch",
+              "url": "/api/users/change-password"
+            }
+          ]
+        },
+        {
+          "name": "auth_server_user_delete",
+          "title": "User Delete",
+          "desc": "User Delete",
+          "apiList": [
+            {
+              "method": "delete",
+              "url": "/api/users/*"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "role_management",
+      "title": "Role Management",
+      "desc": "Role Management",
+      "permissions": [
+        {
+          "name": "auth_server_role_read",
+          "title": "Role Read",
+          "desc": "Role Read",
+          "apiList": [
+            {
+              "method": "get",
+              "url": "/api/roles"
+            },
+            {
+              "method": "get",
+              "url": "/api/roles/**"
+            },
+            {
+              "method": "get",
+              "url": "/api/permissions"
+            },
+            {
+              "method": "get",
+              "url": "/api/permissions/**"
+            }
+          ]
+        },
+        {
+          "name": "auth_server_role_create",
+          "title": "Role Create",
+          "desc": "Role Create",
+          "apiList": [
+            {
+              "method": "post",
+              "url": "/api/roles"
+            },
+            {
+              "method": "get",
+              "url": "/api/permissions"
+            },
+            {
+              "method": "get",
+              "url": "/api/permissions/**"
+            }
+          ]
+        },
+        {
+          "name": "auth_server_role_update",
+          "title": "Role Update",
+          "desc": "Role Update",
+          "apiList": [
+            {
+              "method": "patch",
+              "url": "/api/roles/**"
+            },
+            {
+              "method": "put",
+              "url": "/api/roles/**"
+            },
+            {
+              "method": "get",
+              "url": "/api/permissions"
+            },
+            {
+              "method": "get",
+              "url": "/api/permissions/**"
+            }
+          ]
+        },
+        {
+          "name": "auth_server_role_delete",
+          "title": "Role Delete",
+          "desc": "Role Delete",
+          "apiList": [
+            {
+              "method": "delete",
+              "url": "/api/roles"
+            },
+            {
+              "method": "delete",
+              "url": "/api/roles/**"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+# https://www.websequencediagrams.com/
+
+title PA UI Authentication/Authorization Sequesnce
+
+Front-End->PA-Auth-Server: Token Request (POST /oauth/token)
+PA-Auth-Server->Front-End: Token (1e370c30-e3d0-4dde-8da3-8cc27f5c3163)
+
+note right of Front-End: Need Access To Some Resource
+Front-End->Resource Server: Resource Request (GET resources + Header: {Authorization:"Bearer 1e370c30-e3d0-4dde-8da3-8cc27f5c3163"})
+Resource Server->PA-Auth-Server: Get User Info (GET /api/me + Header: {Authorization:"Bearer 1e370c30-e3d0-4dde-8da3-8cc27f5c3163"})
+PA-Auth-Server->+Resource Server: User Info (Containing username, roles and permissions)
+
+note left of Resource Server: Check User Permissions
+Resource Server->Front-End: Resource
